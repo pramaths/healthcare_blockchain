@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.31.0",
+    "@usedapp/core": "^1.2.13",
+    "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
+    "connectkit": "^1.7.3",
     "crypto-js": "^4.2.0",
     "ipfs-http-client": "^60.0.1",
     "js-cookie": "^3.0.5",
@@ -17,6 +21,8 @@
     "react": "^18",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18",
+    "viem": "^2.9.25",
+    "wagmi": "^2.5.20",
     "web3": "^4.7.0"
   },
   "devDependencies": {

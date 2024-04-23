@@ -1,23 +1,19 @@
-// frontend/pages/index.js
-import { useEthers } from '@usedapp/core';
-import { ConnectButton } from '@connectkit/client';
-import Link from 'next/link';
+import next from 'next';
+import { ConnectKitButton } from 'connectkit';
 
-export default function Home() {
-  const { account } = useEthers();
-
+const Home = () => {
   return (
-    <div className="p-8">
-      <ConnectButton />
-      {account && (
-        <div>
-          <h1 className="text-2xl font-bold">Welcome, {account}</h1>
-          <Link href="/records">
-            <a className="mt-4 inline-block bg-blue-500 text-white p-2 rounded">Manage Records</a>
-          </Link>
-        </div>
-      )}
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+      }}
+    >
+      <ConnectKitButton />
     </div>
   );
-}
-s
+};
+
+export default Home;
