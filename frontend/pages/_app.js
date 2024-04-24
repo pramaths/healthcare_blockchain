@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import { Web3Provider } from './components/Web3Provider';
+import { Web3Provider } from '../components/Web3Provider';
 
 function MyApp({ Component, pageProps }) {
   return (

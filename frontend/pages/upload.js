@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 
 const UploadHealthDataWithNoSSR = dynamic(
-  () => import('./components/UploadHelathdata'),
+  () => import('../components/UploadHelathdata'),
   { ssr: false }  
 );
 

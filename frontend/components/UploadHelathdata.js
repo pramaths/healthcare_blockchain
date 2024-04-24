@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import AES from "crypto-js/aes";
 import axios from "axios";
-import contractABI from "../../abi/PatientData.json";
+import contractABI from "../abi/PatientData.json";
 import { useAccount } from "wagmi";
 import Link from "next/link";
 import { FaFilePdf } from 'react-icons/fa'; // Icon for PDF files
