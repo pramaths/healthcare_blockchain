@@ -2,17 +2,21 @@
 pragma solidity ^0.8.4;
 
 contract ConsentManagement {
-    mapping(uint256 => mapping(address => bool)) public consents; // patientId to (entityAddress to consent status)
+    mapping(address => mapping(address => bool)) public consentGiven;
 
-    function giveConsent(uint256 patientId, address entity) public {
-        consents[patientId][entity] = true;
+    event ConsentUpdated(address indexed patient, address indexed viewer, bool consentStatus);
+
+    function giveConsent(address viewer) public {
+        consentGiven[msg.sender][viewer] = true;
+        emit ConsentUpdated(msg.sender, viewer, true);
     }
 
-    function revokeConsent(uint256 patientId, address entity) public {
-        consents[patientId][entity] = false;
+    function revokeConsent(address viewer) public {
+        consentGiven[msg.sender][viewer] = false;
+        emit ConsentUpdated(msg.sender, viewer, false);
     }
 
-    function checkConsent(uint256 patientId, address entity) public view returns (bool) {
-        return consents[patientId][entity];
+    function checkConsent(address patient, address viewer) public view returns (bool) {
+        return consentGiven[patient][viewer];
     }
 }

@@ -1,0 +1,5 @@
+{
+  "HealthcareDataManagementModule#AuditTrailContract": "0x07F7FE76244C09A1E2a09a913db9ff448ebBA7Ba",
+  "HealthcareDataManagementModule#ConsentManagement": "0xD2b437e17d521153b1D134A817373A9443877fB9",
+  "HealthcareDataManagementModule#PatientData": "0x7A80Dd3c040dc9D32842935BFF699D5cA0a891Ab"
+}
